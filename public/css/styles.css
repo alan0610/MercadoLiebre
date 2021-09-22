@@ -1,0 +1,252 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ebebeb;
+}
+p {
+  font-size: 12px;
+  text-align: center;
+}
+h3 {
+  font-size: 24px;
+}
+.precio {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 5px;
+  width: 30%;
+}
+.descuento {
+  font-size: 16px;
+  text-align: left;
+  color: #39b54a;
+  margin-top: 5px;
+  width: 30%;
+}
+.precio-descuento{
+  display: flex;
+}
+.descripcion {
+  font-size: 16px;
+  text-align: left;
+  margin-top: 5px;
+  display: none;
+}
+header {
+  background-color: #eac926;
+}
+header p {
+  margin-top: 10px;
+}
+header nav {
+  font-size: 12px;
+  margin-top: 10px;
+  display: none;
+}
+header ul {
+  margin-top: 10px;
+}
+header ul li {
+  list-style-type: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.logo-buscador{
+  display: flex;
+}
+.logo{
+  width: 50%;
+}
+.buscador{
+  width: 50%;
+}
+main img {
+  width: 100%;
+}
+.burger-menu {
+  text-align: center;
+}
+.burger-menu i {
+  background-color: #1259c3;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  margin: 10px 0px 20px 0px;
+  padding: 10px;
+}
+
+
+
+
+/* inicio de footer */
+.footer-icons{
+  color: #1259c3;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+footer .footer-icons i{
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+.footer-icons i:hover{
+  color: #e5be01;
+}
+footer p {
+  text-align: center;
+  padding: 10px;
+}
+footer h4 {
+  text-align: center;
+  font-weight: bold;
+}
+footer {
+  background-color: #fff;
+  margin-top: 20px;
+}
+/*fin de footer*/
+
+main section {
+  width: 90%;
+  margin: auto;
+}
+main section article {
+  margin-top: 10px;
+  box-shadow: 0px 0px 0px rgb(100, 100, 100);
+}
+main section article:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transition: box-shadow, 0.2s
+}
+main section article:hover .descripcion{
+  display:block
+}
+.contenedor-articulo {
+  border-top: 1px solid #ebebeb;
+  background-color: #fff;
+  padding: 15px;
+}
+.circulo-icono {
+  color: #39b54a;
+  border-radius: 50%;
+  border: 1px solid #39b54a;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  transition: all 0.3s ease-out;
+}
+.circulo-icono:hover{
+  transform:rotate(-90deg)
+}
+button{
+  max-width: 500px;
+  width: 100%;
+  background-color: blanchedalmond;
+  border: none;
+  padding: 12px;
+  color: #0022AA;
+  margin: 16px 0;
+  font-size: 16px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+button:hover{
+  background-color: #0022AA;
+  color: white
+}
+
+form{
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  border-radius: 10px;
+}
+form input{
+  border-radius: 5px;
+  margin-bottom: 16px;
+  border: 1px solid black;
+}
+
+
+
+@media (min-width: 361px) {
+  section div.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main section article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  .precio, .descuento{
+    width: 50%;
+  }
+  header nav {
+    display: block;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .productos article{
+    width: 45%;
+}
+}
+
+@media (min-width: 481px){
+  .logo-buscador-cuotas{
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo{
+    width: 33vw;
+  }
+  .buscador{
+    width: 33vw;
+  }
+  .cuotas{
+    width: 33vw;
+  }
+  .listas{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .ul1{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .ul2{
+    display: flex;
+    justify-content: flex-end;
+  }
+  li{
+    padding: 5px
+  }
+}
+
+
+@media (min-width: 1269px){
+  .productos article{
+    width: 22%
+  }
+  .footer-entero{
+    display:flex;
+    justify-content: space-around;
+  }
+  .copyright{
+    position: relative;
+    right: 40vw
+  }
+}
