@@ -14,28 +14,9 @@ p {
 h3 {
   font-size: 24px;
 }
-.precio {
-  font-size: 18px;
-  text-align: left;
-  margin-top: 5px;
-  width: 30%;
-}
-.descuento {
-  font-size: 16px;
-  text-align: left;
-  color: #39b54a;
-  margin-top: 5px;
-  width: 30%;
-}
-.precio-descuento{
-  display: flex;
-}
-.descripcion {
-  font-size: 16px;
-  text-align: left;
-  margin-top: 5px;
-  display: none;
-}
+
+/*INICIO HEADER*/
+
 header {
   background-color: #eac926;
 }
@@ -60,11 +41,29 @@ header ul li a {
 .logo-buscador{
   display: flex;
 }
-.logo{
-  width: 50%;
+.logo img{
+  width: 70%;
+  margin-top: 10px;
+}
+.buscar{
+  width: 30vw;
+  height: fit-content;
+  border: transparent;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 10px 10px 30px;
+  margin-top: 10px;
+  outline: none;
+}
+.buscador-completo{
+  display: flex;
 }
 .buscador{
-  width: 50%;
+  border: transparent;
+  height: fit-content;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 10px 10px 30px;
+  margin-top: 10px;
+  outline: none;
 }
 main img {
   width: 100%;
@@ -81,10 +80,10 @@ main img {
   padding: 10px;
 }
 
+/* FIN HEADER */
 
+/* INICIO FOOTER */
 
-
-/* inicio de footer */
 .footer-icons{
   color: #1259c3;
   text-align: center;
@@ -111,8 +110,33 @@ footer {
   background-color: #fff;
   margin-top: 20px;
 }
-/*fin de footer*/
 
+/*FIN FOOTER*/
+
+/*INICIO MAIN*/
+
+.precio {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 5px;
+  width: 30%;
+}
+.descuento {
+  font-size: 16px;
+  text-align: left;
+  color: #39b54a;
+  margin-top: 5px;
+  width: 30%;
+}
+.precio-descuento{
+  display: flex;
+}
+.descripcion {
+  font-size: 16px;
+  text-align: left;
+  margin-top: 5px;
+  display: none;
+}
 main section {
   width: 90%;
   margin: auto;
@@ -145,7 +169,12 @@ main section article:hover .descripcion{
 .circulo-icono:hover{
   transform:rotate(-90deg)
 }
-button{
+
+/*FIN MAIN*/
+
+/* INICIO LOGIN Y REGISTRO*/
+
+.login{
   max-width: 500px;
   width: 100%;
   background-color: blanchedalmond;
@@ -157,11 +186,10 @@ button{
   transition-property: background-color;
   transition-duration: 0.2s;
 }
-button:hover{
+.login:hover{
   background-color: #0022AA;
   color: white
 }
-
 form{
   max-width: 500px;
   width: 100%;
@@ -177,7 +205,7 @@ form input{
   border: 1px solid black;
 }
 
-
+/* FIN LOGIN Y REGISTRO*/
 
 @media (min-width: 361px) {
   section div.productos{
@@ -212,7 +240,7 @@ form input{
   .logo{
     width: 33vw;
   }
-  .buscador{
+  .buscar{
     width: 33vw;
   }
   .cuotas{

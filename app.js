@@ -1,19 +1,32 @@
-const express=require("express");
-const app=express();
-const path=require("path");
+const express = require("express");
+const session = require("express-session");
+const app = express();
+const path = require("path");
+const methodOverride =  require('method-override')
+const passport = require("passport")
+const mainRouter = require("./routes/mainRouter")
+const userRouter = require("./routes/userRouter")
+const productsRouter = require("./routes/productsRouter")
 
-app.listen(process.env.PORT || 3000,()=>{console.log("Servidor corriendo en: https://localhost:3000/")});
+app.listen(process.env.PORT || 3006,()=>{console.log("Servidor corriendo en: localhost:3006/")});
 
-app.get("/", (req, res)=>{
-    res.sendFile(path.join(__dirname, "./views/home.html"))
-})
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
+const cookies = require('cookie-parser');
+app.use(cookies());
+app.use(methodOverride('_method'))
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+	secret: "Shhh, secreto",
+	resave: false,
+	saveUninitialized: false,
+}));
+app.use(passport.initialize())
+app.use(passport.session())
 
-app.get("/login", (req, res)=>{
-    res.sendFile(path.join(__dirname, "./views/login.html"))
-})
+app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'))
 
-app.get("/registro", (req, res)=>{
-    res.sendFile(path.join(__dirname, "./views/registro.html"))
-})
-
-app.use(express.static("public"))
+app.use('/', mainRouter)
+app.use("/", userRouter)
+app.use('/productos', productsRouter)

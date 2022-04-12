@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Bienvenidxs a MercadoLiebre</title>
+        <title>Bienvenidos a MercadoLiebre</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -13,11 +13,11 @@
             <div class="logo-buscador-cuotas">
             <div class="logo-buscador">
             <div class="logo">
-            <img src="images/logo-mercado-liebre.svg">
+                <img src="images/logo-mercado-liebre.svg">
             </div>
-            <div class="buscador">
-                <input type="text" name="buscar" placeholder="Buscar productos, marcas y más">
-                <i class="fa fa-search"></i>
+            <div class="buscador-completo">
+                <input type="text" class="buscar" placeholder="Buscar productos, marcas y más">
+                <button type="submit" class="buscador"><i class="fa fa-search"></i></button>
             </div>
             </div>    
             <p>Comprá en cuotas y sin tarjeta de crédito</p>
@@ -27,7 +27,7 @@
                     <ul class="ul1">
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Vender</a></li>
+                    <li><a href="/productos/create">Vender</a></li>
                     <li><a href="#">Ayuda</a></li>
                 </ul>
                 <ul class="ul2">
@@ -63,11 +63,19 @@
                 </article>
                 <article>
                     <div class="articulo-entero">
-                    <img src="images/img-macbook-pro-2019.jpg" width="360" alt="MacBook">
-                    <div class="contenedor-articulo">    
+                    <img>
+                    <div class="contenedor-articulo">
+                        <div class="circulo-icono"><i class="fas fa-truck"></i></div>
+                        <% for (let i=0 ; i < productos.length ; i++) { %>
+                            <div class= "contenedor-products">
+                                <a href="/products/<%=productos[i].id%>">
+                                    <p class="nombre-paleta">NOMBRE: <%= productos[i].titulo %></p>
+                                </a>
+                            </div>
+                    <% } %>    
                         <div class="circulo-icono"><i class="fas fa-truck"></i></div>
                         <div class="precio-descuento">
-                        <p class="precio">$230.000</p>
+                        <p class="precio">productos.precio</p>
                         <p class="descuento">20% off</p>
                         </div>
                         <h4 class="descripcion">MacBook Pro 2019</h4>
